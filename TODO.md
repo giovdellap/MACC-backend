@@ -1,6 +1,23 @@
-## SCHERMATE
+## TASK
+- backend:
+  - docker
+  - struttura
+  - definizione model
+  - Attacco db mongo
+  - controller
+  - viewProjects
+  - newProject
+- App:
+  - View Projects
+    - mettere lista
+    - chiamata REST
+    - bottone logout
+  - New Project
+    - Mettere form
+    - mettere speech-to-text
 
-1) Login/Signin
+## SCHERMATE
+1) Login/Signin - OK
 2) View Projects
 3) New Project
 4) View Project Map
@@ -17,6 +34,7 @@ Additional Features:
 - 6:
   - GPS
   - Camera
+  - Microphone
 
 ## BACKEND
 - Google Login/SingIn

@@ -1,3 +1,5 @@
+FIREBASE SHA
+
 Alias name: androiddebugkey
 Creation date: Apr 26, 2024
 Entry type: PrivateKeyEntry
@@ -12,3 +14,5 @@ Certificate fingerprints:
 	 SHA256: 04:03:69:2E:02:1E:16:41:63:27:F0:FE:B2:EE:3E:F2:86:2B:DA:FA:EE:70:F6:1A:79:D0:01:95:6A:88:A5:7A
 Signature algorithm name: SHA256withRSA
 Subject Public Key Algorithm: 2048-bit RSA key
+
+

@@ -1,0 +1,21 @@
+OnSiteHelper:
+
+Android
+ID CLIENT: 397094117896-k18kta0okg6q0mpqpvpg78u226509g73.apps.googleusercontent.com
+
+Backend:
+ID client: 397094117896-2bek0jdeb6gv6l198sp0enuvgd9dbm4k.apps.googleusercontent.com
+Client secret: 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
+
+
+MACC-giovdellap
+Android
+ID CLIENT: 626011010926-1819a6f3e3kka4rd6no3rfi6ibqb1k5a.apps.googleusercontent.com
+
+cLIENT WEB:
+id client: 626011010926-jhl0pjflckdpctmabcjmia2q8qprq1n6.apps.googleusercontent.com
+secret: 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
+
+FIREBASE
+Web client ID: 626011010926-vvhmjnjkbrqrkfbro71ne2sv7tpb9dsu.apps.googleusercontent.com
+Secret: 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
