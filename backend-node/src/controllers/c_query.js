@@ -1,6 +1,3 @@
-const { countItems, roundFloats, roundToInt, groupBy, calculateMean } = require("./utils/queryUtils")
-const { getHandler } = require("./controller_utils")
-const PCA = require ("pca-js")
 const { ProjectRequest } = require("../model/project")
 const { MongoHandler } = require("../mongo/handler")
 

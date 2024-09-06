@@ -1,12 +1,12 @@
 ## TASK
 - backend:
-  - docker
-  - struttura
-  - definizione model
-  - Attacco db mongo
-  - controller
-  - viewProjects
-  - newProject
+  - docker - OK
+  - struttura - OK
+  - definizione model - OK
+  - Attacco db mongo - OK
+  - controller - OK
+  - viewProjects - OK
+  - newProject - OK
 - App:
   - View Projects
     - mettere lista

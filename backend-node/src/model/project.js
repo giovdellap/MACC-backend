@@ -2,6 +2,7 @@ class ProjectRequest {
     id = ""
     title = ""
     description = ""
+    editors = []
 
     constructor(title, description) {
         this.title = title
