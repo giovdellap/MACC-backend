@@ -11,7 +11,8 @@ class MongoHandler {
             let collection = this.client.db('projects').collection(user)
 
             let project = req
-            project.id = await collection.countDocuments() + 1
+            let counter = await collection.countDocuments() + 1
+            project.id = String(counter)
 
             const result = await collection.insertOne(project);
 
@@ -50,8 +51,6 @@ class MongoHandler {
                     }
                 }
               }
-              
-            
         } catch (e) {
             console.error(e);
         } finally {
@@ -60,7 +59,51 @@ class MongoHandler {
         
         await this.client.close()
         return projects
+    }
+
+    async addPosition(position, author, id) {
+        try {
+            await this.client.connect();
+            let collection = this.client.db('projects').collection(author)
+
+            const filter = { id: id };
+            const options = { upsert: false };
+            const updateDoc = {
+              $push: {
+                positions: position}
+            }
+            // Update the first document that matches the filter
+            const r = await collection.updateOne(filter, updateDoc, options);
+            return r
      
+        } catch (e) {
+            console.error(e);
+        } finally {
+            await this.client.close();
+        }
+    }
+
+    async getPositions(author, id) {
+        try {
+            console.log("A")
+
+            await this.client.connect();
+            console.log("b")
+
+            let collection = this.client.db('projects').collection(author)
+
+            const filter = { id: id };
+            console.log('AO', filter)
+
+            // Update the first document that matches the filter
+            const r = await collection.findOne(filter);
+            return r.positions
+     
+        } catch (e) {
+            console.error(e);
+        } finally {
+            await this.client.close();
+        }
     }
 
 }

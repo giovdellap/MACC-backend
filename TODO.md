@@ -1,25 +1,45 @@
 ## TASK
 - backend:
-  - docker - OK
-  - struttura - OK
-  - definizione model - OK
-  - Attacco db mongo - OK
-  - controller - OK
-  - viewProjects - OK
-  - newProject - OK
+  - add position
+    - salvataggio DB - OK
+    - image
+  - location list - OK
+  - get project
 - App:
-  - View Projects
-    - mettere lista
-    - chiamata REST
-    - bottone logout
-  - New Project
-    - Mettere form
-    - mettere speech-to-text
+  - Projects list
+    - Aggiungere click elemento lista - OK
+    - Refactoring card
+  - Navigazione project
+    - Chiamata GET a getproject/locationlist - OK
+  - Location List
+    - Vedere lista - OK
+    - Refactoring card
+  - Project Map
+    - Integrare google maps - OK
+    - Far vedere i puntini - OK
+  - Location detail
+    - Popup(?)
+    - Image
+  - Add position
+    - GPS - OK
+    - camera
+      - fare foto
+      - mandare foto
+    - Chiamata REST - OK
+
 
 ## SCHERMATE
-1) Login/Signin - OK
+1) Login/Signin
+   1) Logic working - OK
+   2) Aggiustamenti grafici
 2) View Projects
+   1) Logic Working - OK
+   2) Bottone logout
+   3) Aggiustamenti grafici
 3) New Project
+   1) Logic Working - OK
+   2) Speech to text
+   3) Aggiustamenti grafici
 4) View Project Map
 5) View Project Location List
 6) Add position + photo + description
