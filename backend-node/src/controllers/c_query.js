@@ -15,31 +15,29 @@ const newProject = ( async (req, res) => {
 
 const getProjects = ( async (req, res) => {
 
-  console.log("PARAMS: ", req.params)
-  console.log("REQUEST", req.params.user)
   const user = req.params.user
 
   let handler = new MongoHandler()
   let response = await handler.getProjects(user)
-  console.log("RESPONSE: ", response)
   res.json({data: response})
 })
 
 const addPosition = ( async (req, res) => {
 
-  console.log(req.body)
+  console.log('ADDPOSITION', req.body)
   let position = new Position(
     req.body.title,
     req.body.description,
     req.body.latitude,
-    req.body.longitude
+    req.body.longitude,
+    req.body.image
   )
 
   let handler = new MongoHandler()
   let response = await handler.addPosition(position, req.body.projAuthor, req.body.projId)
-  console.log(response)
+  console.log('ADDPOSITION - RES: ', response)
 
-  res.json(response)
+  res.status(200).send()
 })
 
 
@@ -48,10 +46,9 @@ const getPositions = ( async (req, res) => {
   const author = req.params.author
   const id = req.params.id
 
-  console.log('A', author, id)
   let handler = new MongoHandler()
   let response = await handler.getPositions(author, id)
-  console.log("RESPONSE: ", response)
+  console.log("GETPOSITIONS - RES: ", response)
   res.json({data: response})
 })
 

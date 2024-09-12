@@ -43,7 +43,7 @@ class MongoHandler {
               let collections = await database.collections()
               for (const coll of collections) {
                 let allProjects = coll.find({})
-                for await (const proj of all) {
+                for await (const proj of allProjects) {
                     if(proj.editors) {
                         if (user in proj.editors) {
                             projects.push(proj)

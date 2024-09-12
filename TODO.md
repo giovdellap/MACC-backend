@@ -1,10 +1,20 @@
+## TODO
+  - Position Fragment
+    - Scaffolding - OK
+    - Passare dati local - OK
+    - Prendere dati local - OK
+    - Chiamata GET Immagine
+    - Vedere immagine
+
+
+
 ## TASK
 - backend:
   - add position
     - salvataggio DB - OK
-    - image
+    - image - OK
   - location list - OK
-  - get project
+  
 - App:
   - Projects list
     - Aggiungere click elemento lista - OK
@@ -17,15 +27,24 @@
   - Project Map
     - Integrare google maps - OK
     - Far vedere i puntini - OK
-  - Location detail
-    - Popup(?)
-    - Image
-  - Add position
+  - New position
     - GPS - OK
-    - camera
-      - fare foto
-      - mandare foto
     - Chiamata REST - OK
+  - Camera Fragment
+    - Camera
+      - Orientazione da aggiustare
+    - Salvare foto: OK
+  - Preview Fragment
+    - Vedere foto - OK
+    - Mandare foto: OK
+  - Position Fragment
+    - Scaffolding - OK
+    - Passare dati local - OK
+    - Prendere dati local - OK
+    - Chiamata GET Immagine
+    - Vedere immagine
+  - Popup Google maps (?) 
+  - 
 
 
 ## SCHERMATE

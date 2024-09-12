@@ -21,6 +21,8 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=user
       - MONGO_INITDB_ROOT_PASSWORD=pass
+    logging:
+      driver: none
     volumes:
       - macc-data:/data/db
     networks:
@@ -42,8 +44,22 @@ services:
     networks:
       - main
 
+  image-server:
+    container_name: image-server-macc
+    build:
+      dockerfile: ./app/Dockerfile
+    ports:
+      - 9705:9705
+    environment:
+    - PYTHONUNBUFFERED=1
+    networks:
+      - main
+    volumes:
+      - image-server-data:/app/uploads
+
 volumes:
   macc-data:
+  image-server-data:
 
 networks:
   main:

@@ -3,8 +3,9 @@ class Position {
     description = ""
     latitude = ""
     longitude = ""
+    image = ""
 
-    constructor(title, description, latitude, longitude) {
+    constructor(title, description, latitude, longitude, image) {
         this.title = title
         this.description = description
         this.latitude = latitude
