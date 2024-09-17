@@ -22,6 +22,54 @@ const getProjects = ( async (req, res) => {
   res.json({data: response})
 })
 
+const getProject = ( async (req, res) => {
+
+  const author = req.params.author
+  const projId = req.params.id
+
+  let handler = new MongoHandler()
+  let response = await handler.getProject(author, projId)
+  res.json(response)
+})
+
+const deleteProject = ( async (req, res) => {
+
+  console.log('DELETEPROJECT', req.body)
+
+  let handler = new MongoHandler()
+  let response = await handler.deleteProject(
+    req.body.projAuthor, 
+    req.body.projId)
+  console.log('DELETEPROJECT - RES: ', response)
+  res.status(200).send()
+})
+
+const addEditor = ( async (req, res) => {
+
+  console.log('ADDEDITOR', req.body)
+
+  let handler = new MongoHandler()
+  let response = await handler.addEditor(
+    req.body.editor, 
+    req.body.projAuthor, 
+    req.body.projId)
+  console.log('ADDEDITOR - RES: ', response)
+  res.status(200).send()
+})
+
+const deleteEditor = ( async (req, res) => {
+
+  console.log('DELETEEDITOR', req.body)
+
+  let handler = new MongoHandler()
+  let response = await handler.deleteEditor(
+    req.body.editor, 
+    req.body.projAuthor, 
+    req.body.projId)
+  console.log('DELETEEDITOR - RES: ', response)
+  res.status(200).send()
+})
+
 const addPosition = ( async (req, res) => {
 
   console.log('ADDPOSITION', req.body)
@@ -32,6 +80,10 @@ const addPosition = ( async (req, res) => {
     req.body.longitude,
     req.body.image
   )
+  position.image = req.body.image
+
+  console.log("BODY IMAGE", req.body.image)
+  console.log("POSITION IMAGE: ", position.image)
 
   let handler = new MongoHandler()
   let response = await handler.addPosition(position, req.body.projAuthor, req.body.projId)
@@ -40,6 +92,18 @@ const addPosition = ( async (req, res) => {
   res.status(200).send()
 })
 
+const deletePosition = ( async (req, res) => {
+
+  console.log('DELETEPOSITION', req.body)
+
+  let handler = new MongoHandler()
+  let response = await handler.deletePosition(
+    req.body.position, 
+    req.body.projAuthor, 
+    req.body.projId)
+  console.log('DELETEPOSITION - RES: ', response)
+  res.status(200).send()
+})
 
 const getPositions = ( async (req, res) => {
 
@@ -48,8 +112,13 @@ const getPositions = ( async (req, res) => {
 
   let handler = new MongoHandler()
   let response = await handler.getPositions(author, id)
-  console.log("GETPOSITIONS - RES: ", response)
+  //console.log("GETPOSITIONS - RES: ", response)
   res.json({data: response})
+})
+
+const ping = ( async (req, res) => {
+  res.status(200)
+  res.json({})
 })
 
   
@@ -57,6 +126,12 @@ module.exports = {
   newProject,
   getProjects,
   addPosition,
-  getPositions
+  getPositions,
+  ping,
+  addEditor,
+  deleteEditor,
+  getProject,
+  deletePosition,
+  deleteProject
 }
   

@@ -1,4 +1,5 @@
 class Position {
+    id = ""
     title = ""
     description = ""
     latitude = ""
@@ -10,6 +11,7 @@ class Position {
         this.description = description
         this.latitude = latitude
         this.longitude = longitude
+        this.image = image
     }
 }
 
